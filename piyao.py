@@ -40,5 +40,5 @@ dict1=dict(zip(key_list,value_list))
 #将字典按value值从大到小排序，存储为列表
 list1=sorted(dict1.items(),key=lambda item:item[1],reverse=True)
 #输出列表前十个
-print(list[0:9])
+print(list1[0:9])
 driver.close()
