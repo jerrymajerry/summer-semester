@@ -11,12 +11,17 @@ driver = webdriver.Chrome()
 driver.get("http://piyao.sina.cn/")
 time.sleep(3)
 #控制滚动条到页面底部
-js="var q=document.documentElement.scrollTop=10000"
-driver.execute_script(js)
+for i in range(26):#range（10）爬到了6-24，增大数值为30，爬到3-31，26刚好到4-16
+    js = "window.scrollTo(0,document.body.scrollHeight)"
+    driver.execute_script(js)
+    time.sleep(3)#解决了一个下午，原来是因为需要这个等待时间，不然网页没法加载
 html=driver.page_source
 soup=BeautifulSoup(html,'lxml')
 #print(soup.find_all(class_='rec-list'))
 day=soup.find_all('div',{"class":"day_date"})
-for m in day:
-    print(m.get_text())
+like=soup.find_all('div',{"class":"like_text"})
+title=soup.find_all('div',{"class":"left_title"})
+for m in like:
+    x=m.get_text()
+    print(x)
 driver.close()
