@@ -21,7 +21,24 @@ soup=BeautifulSoup(html,'lxml')
 day=soup.find_all('div',{"class":"day_date"})
 like=soup.find_all('div',{"class":"like_text"})
 title=soup.find_all('div',{"class":"left_title"})
+l=list()
+t=list()
 for m in like:
     x=m.get_text()
-    print(x)
+    l.append(x)
+for m in title:
+    x=m.get_text()
+    t.append(x)
+
+#按value值对key进行排序
+#将列表中点赞数的数据类型转换为int型，便于排序
+l = list(map(int, l))
+#key为标题，value为点赞数,创建字典
+key_list=t
+value_list=l
+dict1=dict(zip(key_list,value_list))
+#将字典按value值从大到小排序，存储为列表
+list1=sorted(dict1.items(),key=lambda item:item[1],reverse=True)
+#输出列表前十个
+print(list[0:9])
 driver.close()
