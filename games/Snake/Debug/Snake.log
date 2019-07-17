@@ -1,0 +1,8 @@
+﻿  snake_and_food.c
+  ui.c
+c:\users\13394\xxq\samples\games\snake\ui.c(307): warning C4013: “GetStone”未定义；假设外部返回 int
+c:\users\13394\xxq\samples\games\snake\ui.c(307): warning C4047: “=”:“PGAME_COORD”与“int”的间接级别不同
+c:\users\13394\xxq\samples\games\snake\ui.c(319): warning C4047: “=”:“PGAME_COORD”与“int”的间接级别不同
+c:\users\13394\xxq\samples\games\snake\ui.c(330): warning C4047: “=”:“PGAME_COORD”与“int”的间接级别不同
+  正在生成代码...
+  Snake.vcxproj -> C:\Users\13394\xxq\samples\games\Debug\Snake.exe
