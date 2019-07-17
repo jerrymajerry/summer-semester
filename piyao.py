@@ -42,3 +42,5 @@ list1=sorted(dict1.items(),key=lambda item:item[1],reverse=True)
 #输出列表前十个
 print(list1[0:10])
 driver.close()
+
+#运行结果截图为output.jpg
